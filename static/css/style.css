@@ -554,6 +554,10 @@ footer .text span a:hover{
         width: 90%;
         margin: 40px 0;
     }
+    .form form .input {
+        width: 50%;
+        height: 3em;
+    }
 }
 @media (max-width: 900px){
     .about .left img{
