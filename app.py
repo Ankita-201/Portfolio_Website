@@ -9,9 +9,9 @@ db = SQLAlchemy(app)
 
 class Contact(db.Model):
     sno = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(50), nullable=True)
-    email = db.Column(db.VARCHAR(50), nullable=True)
-    message = db.Column(db.String(200), nullable=True)
+    name = db.Column(db.String(50), nullable=False)
+    email = db.Column(db.VARCHAR(50), nullable=False)
+    message = db.Column(db.String(200), nullable=False)
 
 '''@app.route("/")
 def hello_world():
