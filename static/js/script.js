@@ -46,3 +46,6 @@ for (var i = 0; i < navLinks.length; i++) {
         menuBtn.style.pointerEvents = "auto";
     });
 }
+function show_alert() {
+    alert("Thank You for contacting me.");
+  }
