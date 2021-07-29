@@ -30,7 +30,7 @@ def df():
         return redirect("/")
 
     contact1 = Contact.query.all()
-    return render_template('index.html', contact=contact1)
+    return render_template('index.html', contacts=contact1)
 
 if __name__ == '__main__':
     app.run(debug=True)
