@@ -47,7 +47,7 @@ for (var i = 0; i < navLinks.length; i++) {
     });
 }
 function know_more() {
-    alert("Please go below to know more about me.");
+    alert("Please go below to know more.");
   }
 function show_alert() {
     alert("Thank You for contacting me.");
