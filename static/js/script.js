@@ -46,6 +46,9 @@ for (var i = 0; i < navLinks.length; i++) {
         menuBtn.style.pointerEvents = "auto";
     });
 }
+function know_more() {
+    alert("Please go below to know more about me.");
+  }
 function show_alert() {
     alert("Thank You for contacting me.");
   }
