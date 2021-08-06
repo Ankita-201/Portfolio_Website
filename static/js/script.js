@@ -50,5 +50,5 @@ function know_more() {
     alert("Please go below to know more.");
   }
 function show_alert() {
-    alert("Thank You for contacting me.\n(Press 'OK' to send the message)");
+    alert("Thank You for contacting me.\n(Please press 'OK' to send the message)");
   }
