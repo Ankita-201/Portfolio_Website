@@ -24,19 +24,22 @@ def df():
         name=request.form['name']
         email=request.form['email']
         message=request.form['message']
-
-        msg1 =  name + "\n" + email + "\n" + message
-        msg2 = "Thank you for contacting me."
-        server = smtplib.SMTP("smtp.gmail.com", 587)
-        server.starttls()
-        server.login("ankitapatra162001@gmail.com","8372923795")
-        server.sendmail("ankitapatra162001@gmail.com", "ankitapatra162001@gmail.com", msg1)
-        server.sendmail("ankitapatra162001@gmail.com", email, msg2)
-
-        contact=Contact(name=name, email=email, message=message)
-        db.session.add(contact)
-        db.session.commit()
-        return redirect("/")
+        try:
+            msg1 =  name + "\n" + email + "\n" + message
+            msg2 = "Thank you for contacting me."
+            server = smtplib.SMTP("smtp.gmail.com", 587)
+            server.starttls()
+            server.login("ankitapatra162001@gmail.com","8372923795")
+            server.sendmail("ankitapatra162001@gmail.com", "ankitapatra162001@gmail.com", msg1)
+            server.sendmail("ankitapatra162001@gmail.com", email, msg2)
+            print("Mail sent")
+            contact=Contact(name=name, email=email, message=message)
+            db.session.add(contact)
+            db.session.commit()
+            print("Saved in db")
+            return redirect("/")
+        except Exception as e:
+            print(e)
 
     contact1 = Contact.query.all()
     return render_template('index.html', contacts=contact1)
